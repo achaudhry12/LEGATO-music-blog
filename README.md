@@ -1,25 +1,28 @@
-## Overview
+LEGATO Music Blog
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+## Overview
+The goal of this app is to provide an environment where people can upload and share their favorite songs. The user. would have to register to add any songs or see other songs that people have added. They can go further and edit any indivudual song along with deleting any songs. Users in the future would be allowed to comment on songs in order to provide feeback to the uploader and spark a community disscussion.
+
 
 
 <br>
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+The MVP for this poroject is to be a full CRUD app that uses a RESTful JSON API. The user would be able to upload what songs they like and delete them too. The user is also allowed to edit the song they upload. 
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Full Backend using Ruby on Rails
+- Full frontend construction using React
+- Full CRUD (Create, Read, Update, Delete)
+- Link at least three tables together
+- Use RESTful JSON API
+- Responsive CSS
+- User Authentication
+- Deploy using Heroku
 
 <br>
 
@@ -29,11 +32,10 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front end DOM manilpulation |
+|   React Router   | Front end page directory |
+|      axios       | API calls |
+|      Rails       | Back end structure using Ruby |
 
 <br>
 
@@ -41,31 +43,23 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+-Home
+![Home](https://user-images.githubusercontent.com/82814499/122990601-26770980-d372-11eb-859a-ef2dff2b091a.png)
 
-![Dummy Link](url)
+-Login
+![Login](https://user-images.githubusercontent.com/82814499/122990718-43134180-d372-11eb-8958-814ddeab6f86.png)
 
-- Desktop Landing
+-Register
+![Register](https://user-images.githubusercontent.com/82814499/122990732-47d7f580-d372-11eb-9750-f5300a707477.png)
 
-![Dummy Link](url)
+-Songs
+![Songs](https://user-images.githubusercontent.com/82814499/122990758-4c9ca980-d372-11eb-9493-1b3b84d3443e.png)
 
-- Desktop Hero
+-SongDetail
+![SongDetail](https://user-images.githubusercontent.com/82814499/122990811-58886b80-d372-11eb-8aaf-b7e9afd0706f.png)
 
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+-SongEdit
+![Songs](https://user-images.githubusercontent.com/82814499/122990829-5cb48900-d372-11eb-9168-ac313a85198b.png)
 
 #### Component Tree
 
