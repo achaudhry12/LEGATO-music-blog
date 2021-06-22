@@ -9,7 +9,7 @@ The goal of this app is to provide an environment where people can upload and sh
 
 ## MVP
 
-The MVP for this poroject is to be a full CRUD app that uses a RESTful JSON API. The user would be able to upload what songs they like and delete them too. The user is also allowed to edit the song they upload. 
+The MVP for this poroject is to be a full CRUD app that uses a RESTful JSON API. The user would be able to upload what artist they like and delete them too. The user is also allowed to add songs within each artist
 
 <br>
 
@@ -42,22 +42,28 @@ The MVP for this poroject is to be a full CRUD app that uses a RESTful JSON API.
 #### Wireframes
 
 -Home
-![Home](https://user-images.githubusercontent.com/82814499/122990601-26770980-d372-11eb-859a-ef2dff2b091a.png)
+![Home](https://user-images.githubusercontent.com/82814499/122997353-e9af1080-d379-11eb-8846-1e32ca09d15a.png)
 
 -Login
-![Login](https://user-images.githubusercontent.com/82814499/122990718-43134180-d372-11eb-8958-814ddeab6f86.png)
+![Login](https://user-images.githubusercontent.com/82814499/122997361-eddb2e00-d379-11eb-822a-398630e3f35d.png)
 
 -Register
-![Register](https://user-images.githubusercontent.com/82814499/122990732-47d7f580-d372-11eb-9750-f5300a707477.png)
+![Register](https://user-images.githubusercontent.com/82814499/122997376-f3d10f00-d379-11eb-996f-5da2a4c0cab9.png)
 
--Songs
-![Songs](https://user-images.githubusercontent.com/82814499/122990758-4c9ca980-d372-11eb-9493-1b3b84d3443e.png)
+-Artists
+![Artists](https://user-images.githubusercontent.com/82814499/122997445-03505800-d37a-11eb-92f8-830b0717422d.png)
 
--SongDetail
-![SongDetail](https://user-images.githubusercontent.com/82814499/122990811-58886b80-d372-11eb-8aaf-b7e9afd0706f.png)
+-ArtistDetail
+![ArtistDetail](https://user-images.githubusercontent.com/82814499/122997498-1105dd80-d37a-11eb-826f-7e0b564b5baf.png)
+
+-ArtistEdit
+![ArtistEdit](https://user-images.githubusercontent.com/82814499/122997536-1c590900-d37a-11eb-96ee-f5e66091cd63.png)
+
+-SongCreate
+![SongCreate](https://user-images.githubusercontent.com/82814499/122997571-25e27100-d37a-11eb-9855-3738418e1f32.png)
 
 -SongEdit
-![Songs](https://user-images.githubusercontent.com/82814499/122990829-5cb48900-d372-11eb-9168-ac313a85198b.png)
+![SongEdit](https://user-images.githubusercontent.com/82814499/122997606-2e3aac00-d37a-11eb-9627-53b4e996b5d4.png)
 
 #### Component Tree
 
