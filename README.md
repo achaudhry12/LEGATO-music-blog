@@ -102,7 +102,7 @@ src
 ### Server (Back End)
 
 #### ERD Model
-![LEGATO](https://user-images.githubusercontent.com/82814499/122993973-efa2f280-d375-11eb-8cf0-61f04f6baf92.png)
+![LEGATO (1)](https://user-images.githubusercontent.com/82814499/122994220-385aab80-d376-11eb-8965-8fb7cc4ab09d.png)
 
 <br>
 
