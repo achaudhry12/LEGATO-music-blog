@@ -102,10 +102,8 @@ src
 ### Server (Back End)
 
 #### ERD Model
+![LEGATO](https://user-images.githubusercontent.com/82814499/122993973-efa2f280-d375-11eb-8cf0-61f04f6baf92.png)
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
 <br>
 
 ***
