@@ -1,4 +1,4 @@
-LEGATO Music Blog
+# LEGATO Music Blog
 
 ## Overview
 The goal of this app is to provide an environment where people can upload and share their favorite songs. The user. would have to register to add any songs or see other songs that people have added. They can go further and edit any indivudual song along with deleting any songs. Users in the future would be allowed to comment on songs in order to provide feeback to the uploader and spark a community disscussion.
