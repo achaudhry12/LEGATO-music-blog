@@ -28,8 +28,6 @@ The MVP for this poroject is to be a full CRUD app that uses a RESTful JSON API.
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | Front end DOM manilpulation |
