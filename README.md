@@ -30,8 +30,9 @@ This application is a full CRUD app that uses a RESTful JSON API as its database
 | :--------------: | :----------------------------------------- |
 |      React       | Front end DOM manilpulation |
 |   React Router   | Front end page directory |
-|      axios       | API calls |
+|      axios       | API calls on the front end |
 |      Rails       | Back end structure using Ruby |
+|      CORS        | Allows deployment with Heroku |
 
 <br>
 
@@ -111,11 +112,29 @@ src
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create backend Scaffold    |    H     |     1.5 hrs      |      TBD     |    TBD    |
-| Create CRUD Actions |    H     |     3 hrs      |     TBD     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                         | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Project Approval             |    H     |     3 hrs      |      5 hrs    |    6 hrs    |
+| Create backend Scaffold      |    H     |     1.5 hrs    |      TBD      |     TBD     |
+| User authentication          |    L     |     2 hrs      |      TBD      |     TBD     |
+| Check Routes and Controllers |    H     |     1.5 hrs    |      TBD      |     TBD     |
+| Controller logic             |    H     |     2.5 hrs    |      TBD      |     TBD     |
+| Set up front-end files       |    H     |     1 hr       |      TBD      |     TBD     |
+| Set up config files          |    H     |     1 hr       |      TBD      |     TBD     |
+| Layout.jsx                   |    H     |     1 hr       |      TBD      |     TBD     |
+| MainContainer.jsx            |    H     |     2 hrs      |      TBD      |     TBD     |
+| Login                        |    L     |     1 hr       |      TBD      |     TBD     |
+| Register                     |    L     |     1 hr       |      TBD      |     TBD     |
+| Initial CSS                  |    L     |     1 hr       |      TBD      |     TBD     |
+| Artist.jsx                   |    H     |     2 hrs      |      TBD      |     TBD     |
+| ArtistDetail.jsx             |    H     |     2 hrs      |      TBD      |     TBD     |
+| ArtistCreate.jsx             |    H     |     2 hrs      |      TBD      |     TBD     |
+| ArtistEdit.jsx               |    H     |     2 hrs      |      TBD      |     TBD     |
+| SongCreate.jsx               |    H     |     2 hrs      |      TBD      |     TBD     |
+| SongEdit.jsx                 |    H     |     2 hrs      |      TBD      |     TBD     |
+| Advanced CSS                 |    L     |     5 hrs      |      TBD      |     TBD     |
+| Post MVP                     |    L     |     7 hrs      |      TBD      |     TBD     |
+| TOTAL                        |          |     42.5 hrs   |      TBD      |     TBD     |
 
 <br>
 
