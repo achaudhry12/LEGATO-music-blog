@@ -1,5 +1,22 @@
 # LEGATO Music Blog
 
+- [Overview](#overview)
+- [MVP](#mvp)
+  - [Goals](#goals)
+  - [Libraries and Dependencies](#libraries-and-dependencies)
+  - [Client (Front End)](#client-front-end)
+    - [Wireframes](#wireframes)
+    - [Component Tree](#component-tree)
+    - [Component Architecture](#component-architecture)
+    - [Time Estimates](#time-estimates)
+  - [Server (Back End)](#server-back-end)
+    - [ERD Model](#erd-model)
+- [Post-MVP](#post-mvp)
+- [Code Showcase](#code-showcase)
+- [Code Issues & Resolutions](#code-issues--resolutions)
+
+<br>
+
 ## Overview
 The goal of this app is to provide an environment where people can upload and share their favorite songs. The user. would have to register to add any songs or see other songs that people have added. They can go further and edit any indivudual song along with deleting any songs. Users in the future would be allowed to comment on songs in order to provide feeback to the uploader and spark a community disscussion.
 
