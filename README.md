@@ -3,13 +3,11 @@
 ## Overview
 The goal of this app is to provide an environment where people can upload and share their favorite songs. The user. would have to register to add any songs or see other songs that people have added. They can go further and edit any indivudual song along with deleting any songs. Users in the future would be allowed to comment on songs in order to provide feeback to the uploader and spark a community disscussion.
 
-
-
 <br>
 
 ## MVP
 
-The MVP for this poroject is to be a full CRUD app that uses a RESTful JSON API. The user would be able to upload what artist they like and delete them too. The user is also allowed to add songs within each artist
+This application is a full CRUD app that uses a RESTful JSON API as its database. The user would be able to upload what artist they like and delete them too. The user is also allowed to add songs within each artist. They can also delete these new song enteries. This app will use CSS flexbox and grid in order to organize the eleements on screen.
 
 <br>
 
@@ -20,7 +18,7 @@ The MVP for this poroject is to be a full CRUD app that uses a RESTful JSON API.
 - Full CRUD (Create, Read, Update, Delete)
 - Link at least three tables together
 - Use RESTful JSON API
-- Responsive CSS
+- Responsive CSS using Flexbox and Grid
 - User Authentication
 - Deploy using Heroku
 
@@ -67,25 +65,45 @@ The MVP for this poroject is to be a full CRUD app that uses a RESTful JSON API.
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![image](https://user-images.githubusercontent.com/82814499/123049473-949cea00-d3cd-11eb-82d8-e7061d7bd556.png)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ layouts/
+      |__ Layout.jsx
+|__ screens/
+      |__ Artists.jsx
+      |__ ArtistDetail.jsx
+      |__ ArtistCreate.jsx
+      |__ ArtistEdit.jsx
+      |__ SongCreate.jsx
+      |__ SongEdit.jsx
+      |__ Login.jsx
+      |__ Register.jsx
+|__ css/
+      |__ Artists.css
+      |__ ArtistDetail.css
+      |__ ArtistCreate.css
+      |__ ArtistEdit.css
+      |__ SongCreate.css
+      |__ SongEdit.css
+      |__ Login.css
+      |__ Register.css
 |__ services/
+      |__ api-config.js
+      |__ auth.js
+      |__ artists.js
+      |__ songs.js
+|__ images/
+|__ App.css
+|__ App.js
+|__ index.css
+|__ index.js
 
 ```
 
@@ -95,11 +113,9 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create backend scaffold    |    H     |     1.5 hrs      |      TBD     |    TBD    |
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -110,13 +126,14 @@ src
 
 <br>
 
-***
-
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
-
-***
+- Add comments section under each artist, where users can comment their opions on the aritist
+- Add an avatar for the user
+- Add a search feature for artists in the database
+- Add a favorites/ upvote system
+- Add a cool CSS animation
+- Connect this with the Spotify API, if possible
 
 ## Code Showcase
 
