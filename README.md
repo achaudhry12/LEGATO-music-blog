@@ -113,8 +113,8 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create backend scaffold    |    H     |     1.5 hrs      |      TBD     |    TBD    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create backend Scaffold    |    H     |     1.5 hrs      |      TBD     |    TBD    |
+| Create CRUD Actions |    H     |     3 hrs      |     TBD     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
 <br>
