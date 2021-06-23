@@ -72,6 +72,9 @@ This application is a full CRUD app that uses a RESTful JSON API as its database
 -ArtistDetail
 ![ArtistDetail](https://user-images.githubusercontent.com/82814499/122997498-1105dd80-d37a-11eb-826f-7e0b564b5baf.png)
 
+-ArtistCreate
+![ArtistCreate](https://user-images.githubusercontent.com/82814499/123105987-3d673b80-d406-11eb-98db-eefadadf583f.png)
+
 -ArtistEdit
 ![ArtistEdit](https://user-images.githubusercontent.com/82814499/122997536-1c590900-d37a-11eb-96ee-f5e66091cd63.png)
 
