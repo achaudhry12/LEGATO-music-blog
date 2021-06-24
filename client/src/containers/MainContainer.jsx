@@ -5,13 +5,13 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 // Custom Components
 import Artists from '../screens/Artists';
 import ArtistDetail from '../screens/ArtistDetail';
-import ArtistEdit from '../screens/ArtistEdit';
+// import ArtistEdit from '../screens/ArtistEdit';
 import ArtistCreate from '../screens/ArtistCreate';
 import SongCreate from '../screens/SongCreate';
 import SongEdit from '../screens/SongEdit'
 
 // Services
-import { getAllArtists } from '../services/artists';
+import { getAllArtists, postArtist } from '../services/artists';
 import { deleteSong, getAllSongs, postSong, putSong } from '../services/song';
 
 export default function MainContainer() {
@@ -21,7 +21,7 @@ export default function MainContainer() {
 
 	useEffect(() => {
 		const fetchArtist = async () => {
-			const artistList = await getAllArtist();
+			const artistList = await getAllArtists();
 			setArtist(artistList);
 		};
 		fetchArtist();
@@ -30,48 +30,68 @@ export default function MainContainer() {
 	useEffect(() => {
 		const fetchSongs = async () => {
 			const songList = await getAllSongs();
-			setSong(songList);
+			setSongs(songList);
 		};
 		fetchSongs();
 	}, []);
 
-	const handleCreate = async (formData) => {
+  const handleCreateArtist = async (formData) => {
+		const artistItem = await postArtist(formData);
+		setArtist((prevState) => [...prevState, artistItem]);
+		history.push('/artist');
+  };
+  
+  // const handleUpdateArtist = async (id, formData) => {
+	// 	const artistItem = await putSong(id, formData);
+	// 	setSong((prevState) =>
+	// 		prevState.map((food) => {
+	// 			return song.id === Number(id) ? songItem : song;
+	// 		})
+	// 	);
+	// 	history.push('/song');
+  // };
+
+	const handleCreateSong = async (artistId, formData) => {
 		const songItem = await postSong(formData);
 		setSong((prevState) => [...prevState, songItem]);
-		history.push('/songs');
+		history.push(`/artist/${artistId}/songs`);
 	};
 
-	const handleUpdate = async (id, formData) => {
+	const handleUpdateSong = async (id, formData) => {
 		const songItem = await putSong(id, formData);
 		setSong((prevState) =>
-			prevState.map((food) => {
+			prevState.map((song) => {
 				return song.id === Number(id) ? songItem : song;
 			})
 		);
-		history.push('/song');
-	};
-	const handleDelete = async (id) => {
-		await deleteFood(id);
-		setSong((prevState) => prevState.filter((food) => food.id !== id));
+		history.push(`/artist/${artistId}/songs`);
+  };
+  
+	const handleDeleteSong = async (id) => {
+		await deleteSong(id);
+		setSong((prevState) => prevState.filter((song) => song.id !== id));
 	};
 
 	return (
 		<div>
 			<Switch>
-				<Route path='/songs/:id/edit'>
-					<Edit songs={songs} handleUpdate={handleUpdate} />
+				<Route path='/artist'>
+          <Artists artist={artist} />
 				</Route>
 				<Route path='/artist/:id'>
-					<ArtistDetail artist={artist} />
-				</Route>
+          <ArtistDetail artist={artist} handleDelete={handleDeleteSong} />
+        </Route>
+        {/* <Route path='/artist/edit'>
+					<ArtistEdit />
+				</Route> */}
 				<Route path='/artist/new'>
-					<ArtistCreate handleCreate={handleCreate} />
+					<ArtistCreate artist={artist} handleCreate={handleCreateArtist} />
 				</Route>
-				<Route path='/songs'>
-					<Songs songs={songs} handleDelete={handleDelete} />
+				<Route path='/artists/:id/songs'>
+          <SongCreate songs={songs} handleCreate={handleCreateSong}/>
 				</Route>
-				<Route path='/artist'>
-					<Flavors flavors={flavors} />
+				<Route path='artists/:id/songs/:id'>
+          <SongEdit songs={songs} handleUpdate={handleUpdateSong} />
 				</Route>
 			</Switch>
 		</div>

@@ -5,7 +5,7 @@ export default function Artists(props) {
 
 	return (
 		<div>
-			<h3>Flavors</h3>
+			<h3>Artists</h3>
 			{flavors.map((artists) => (
 				<p key={artists.id}>{artists.name}</p>
 			))}
