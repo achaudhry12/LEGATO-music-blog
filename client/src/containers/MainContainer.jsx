@@ -58,19 +58,19 @@ export default function MainContainer() {
 	return (
 		<div>
 			<Switch>
-				<Route path='/foods/:id/edit'>
-					<FoodEdit foods={foods} handleUpdate={handleUpdate} />
+				<Route path='/songs/:id/edit'>
+					<Edit songs={songs} handleUpdate={handleUpdate} />
 				</Route>
-				<Route path='/foods/:id'>
-					<FoodDetail flavors={flavors} />
+				<Route path='/artist/:id'>
+					<ArtistDetail artist={artist} />
 				</Route>
-				<Route path='/foods/new'>
-					<FoodCreate handleCreate={handleCreate} />
+				<Route path='/artist/new'>
+					<ArtistCreate handleCreate={handleCreate} />
 				</Route>
-				<Route path='/foods'>
-					<Foods foods={foods} handleDelete={handleDelete} />
+				<Route path='/songs'>
+					<Songs songs={songs} handleDelete={handleDelete} />
 				</Route>
-				<Route path='/flavors'>
+				<Route path='/artist'>
 					<Flavors flavors={flavors} />
 				</Route>
 			</Switch>
