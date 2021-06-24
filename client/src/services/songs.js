@@ -1,6 +1,6 @@
 import api from './api-config';
 
-export const getAllFoods = async () => {
+export const getAllSongs = async () => {
 	const resp = await api.get('/foods');
 	return resp.data;
 };

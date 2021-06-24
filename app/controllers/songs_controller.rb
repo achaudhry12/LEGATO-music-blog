@@ -1,39 +1,36 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :update, :destroy]
 
-  # GET /songs
+  # GET /artist/1/songs
   def index
-    @songs = Song.all
+    @artist = Artist.find(params[:artist_id])
+    @songs = Song.where(artist_id: @artist.id)
 
-    render json: @songs
+    render json: @songs, include: :artist
   end
 
-  # GET /songs/1
-  def show
-    render json: @song
-  end
-
-  # POST /songs
+  # POST /artist/1/songs
   def create
+    @artist = Artist.find(params[:artist_id])
     @song = Song.new(song_params)
 
     if @song.save
-      render json: @song, status: :created
+      render json: @song, include: :artist, status: :created
     else
       render json: @song.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /songs/1
+  # PATCH/PUT /artist/1/songs/1
   def update
     if @song.update(song_params)
-      render json: @song
+      render json: @song, include: :artist
     else
       render json: @song.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /songs/1
+  # DELETE /artist/1/songs/1
   def destroy
     @song.destroy
   end

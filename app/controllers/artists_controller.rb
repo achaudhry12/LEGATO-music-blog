@@ -5,7 +5,14 @@ class ArtistsController < ApplicationController
   def index
     @artists = Artist.all
 
-    render json: @artists
+    render json: @artists, include: :songs, status: :ok
+  end
+
+  # GET /artists/1
+  def show 
+    @artists = Artist.find(params[:id])
+
+    render json: @artists, include: :songs
   end
 
   # POST /artists
@@ -14,7 +21,7 @@ class ArtistsController < ApplicationController
     @artist.user = @current_user
 
     if @artist.save
-      render json: @artist, status: :created
+      render json: @artist, include: :songs, status: :created
     else
       render json: @artist.errors, status: :unprocessable_entity
     end
