@@ -34,7 +34,7 @@ function App() {
 	const handleRegister = async (formData) => {
 		const userData = await registerUser(formData);
 		setCurrentUser(userData);
-		history.push('/');
+		history.push('/artists');
 	};
 
 	const handleLogout = () => {

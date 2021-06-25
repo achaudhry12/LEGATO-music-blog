@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   post 'artists/:id/songs', to: 'songs#create'
   patch 'artists/:id/songs/:id', to: 'songs#update'
   delete 'artists/:id/songs/:id', to: 'songs#delete'
+  resources :users, only: :create
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
