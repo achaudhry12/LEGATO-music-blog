@@ -13,7 +13,13 @@ export default function Layout(props) {
 					</>
 				) : (
 					<Link to='/login'><button>Login</button></Link>
-				)}
+        )}
+          {
+          currentUser && 
+          <>
+            <Link to='/artists'>Artists</Link>
+          </>
+        }
 			</header>
 			{children}
 		</div>

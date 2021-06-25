@@ -12,7 +12,7 @@ import SongEdit from '../screens/SongEdit'
 
 // Services
 import { getAllArtists, postArtist } from '../services/artists';
-import { deleteSong, getAllSongs, postSong, putSong } from '../services/song';
+import { deleteSong, getAllSongs, postSong, putSong } from '../services/songs';
 
 export default function MainContainer() {
 	const [artist, setArtist] = useState([]);
@@ -53,13 +53,13 @@ export default function MainContainer() {
 
 	const handleCreateSong = async (artistId, formData) => {
 		const songItem = await postSong(formData);
-		setSong((prevState) => [...prevState, songItem]);
+		setSongs((prevState) => [...prevState, songItem]);
 		history.push(`/artist/${artistId}/songs`);
 	};
 
-	const handleUpdateSong = async (id, formData) => {
+	const handleUpdateSong = async (artistId, id, formData) => {
 		const songItem = await putSong(id, formData);
-		setSong((prevState) =>
+		setSongs((prevState) =>
 			prevState.map((song) => {
 				return song.id === Number(id) ? songItem : song;
 			})
@@ -69,7 +69,7 @@ export default function MainContainer() {
   
 	const handleDeleteSong = async (id) => {
 		await deleteSong(id);
-		setSong((prevState) => prevState.filter((song) => song.id !== id));
+		setSongs((prevState) => prevState.filter((song) => song.id !== id));
 	};
 
 	return (
