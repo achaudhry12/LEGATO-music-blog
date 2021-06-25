@@ -15,14 +15,14 @@ import { getAllArtists, postArtist } from '../services/artists';
 import { deleteSong, getAllSongs, postSong, putSong } from '../services/songs';
 
 export default function MainContainer() {
-	const [artist, setArtist] = useState([]);
+	const [artists, setArtists] = useState([]);
 	const [songs, setSongs] = useState([]);
 	const history = useHistory();
 
 	useEffect(() => {
 		const fetchArtist = async () => {
 			const artistList = await getAllArtists();
-			setArtist(artistList);
+			setArtists(artistList);
 		};
 		fetchArtist();
 	}, []);
@@ -37,8 +37,8 @@ export default function MainContainer() {
 
   const handleCreateArtist = async (formData) => {
 		const artistItem = await postArtist(formData);
-		setArtist((prevState) => [...prevState, artistItem]);
-		history.push('/artist');
+		setArtists((prevState) => [...prevState, artistItem]);
+		history.push('/artists');
   };
   
   // const handleUpdateArtist = async (id, formData) => {
@@ -54,7 +54,7 @@ export default function MainContainer() {
 	const handleCreateSong = async (artistId, formData) => {
 		const songItem = await postSong(formData);
 		setSongs((prevState) => [...prevState, songItem]);
-		history.push(`/artist/${artistId}/songs`);
+		history.push(`/artists/${artistId}/songs`);
 	};
 
 	const handleUpdateSong = async (artistId, id, formData) => {
@@ -64,7 +64,7 @@ export default function MainContainer() {
 				return song.id === Number(id) ? songItem : song;
 			})
 		);
-		history.push(`/artist/${artistId}/songs`);
+		history.push(`/artists/${artistId}/songs`);
   };
   
 	const handleDeleteSong = async (id) => {
@@ -75,17 +75,17 @@ export default function MainContainer() {
 	return (
 		<div>
 			<Switch>
-				<Route path='/artist'>
-          <Artists artist={artist} />
+				<Route path='/artists'>
+          <Artists artists={artists} />
 				</Route>
-				<Route path='/artist/:id'>
-          <ArtistDetail artist={artist} handleDelete={handleDeleteSong} />
+				<Route path='/artists/:id'>
+          <ArtistDetail artists={artists} handleDelete={handleDeleteSong} />
         </Route>
         {/* <Route path='/artist/edit'>
 					<ArtistEdit />
 				</Route> */}
-				<Route path='/artist/new'>
-					<ArtistCreate artist={artist} handleCreate={handleCreateArtist} />
+				<Route path='/artists/new'>
+					<ArtistCreate artists={artists} handleCreate={handleCreateArtist} />
 				</Route>
 				<Route path='/artists/:id/songs'>
           <SongCreate songs={songs} handleCreate={handleCreateSong}/>

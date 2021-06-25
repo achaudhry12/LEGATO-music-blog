@@ -5,21 +5,16 @@ export default function Layout(props) {
 	return (
 		<div>
 			<header>
-				<h1>LEGATO</h1>
+        <h1>LEGATO</h1>
+        <h2>MUSIC BLOG</h2>
 				{currentUser ? (
 					<>
 						<p>{currentUser.username}</p>
-						<button onClick={handleLogout}>Logout</button>
+						<button onClick={handleLogout}>LOGOUT</button>
 					</>
 				) : (
-					<Link to='/login'><button>Login</button></Link>
+					<Link to='/login'><button>LOGIN</button></Link>
         )}
-          {
-          currentUser && 
-          <>
-            <Link to='/artists'>Artists</Link>
-          </>
-        }
 			</header>
 			{children}
 		</div>

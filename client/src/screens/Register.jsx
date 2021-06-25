@@ -18,44 +18,52 @@ export default function Register(props) {
 	};
 
   return (
-    <form
-			onSubmit={(e) => {
-				e.preventDefault();
-				handleRegister(formData);
-			}}
-		>
-			<h3>Register</h3>
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
+      handleRegister(formData);
+    }}
+  >
+  <div className="register-container">
+    <h3>REGISTER</h3>
+    <div className="username-feild">
 			<label>
-				Username:
+				USERNAME:
 				<input
 					type='text'
 					name='username'
 					value={username}
 					onChange={handleChange}
-				/>
+          />
 			</label>
-			<br />
+    </div>
+    <br />
+    <div className="email-feild">
 			<label>
-				Email:
+				EMAIL:
 				<input
 					type='text'
 					name='email'
 					value={email}
 					onChange={handleChange}
-				/>
+          />
 			</label>
-			<br />
+    </div>
+    <br />
+    <div className="password-feild">
 			<label>
-				Password:
+				PASSWORD:
 				<input
 					type='password'
 					name='password'
 					value={password}
 					onChange={handleChange}
-				/>
-			</label>
-			<br />
-			<button>Submit</button>
+          />
+        </label>
+    </div>
+    <br />
+    <button>SUBMIT</button>
+  </div>
 		</form>
   )
 }
