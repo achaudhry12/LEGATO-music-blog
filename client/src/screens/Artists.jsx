@@ -5,9 +5,16 @@ export default function Artists(props) {
 
 	return (
     <div>
-      <h3>ARTISTS</h3>
+      <h1>ARTISTS</h1>
       {artists.map((artists) => (
-        <p key={artists.id}>{artists.name}</p>
+        <div>
+          <img key={artists.id} src={artists.image_url} alt={artists.stage_name}></img>
+          <br />
+          <button>
+            <h2 key={artists.id}>{artists.stage_name}</h2>
+            <p key={artists.id}>{artists.full_name}</p>
+          </button>
+        </div>
       ))}
 		</div>
 	);
