@@ -110,7 +110,7 @@ puts "#{User.count} users created!"
 )
 
 @lack = Artist.create!(
-  stage_name: '6lack',
+  stage_name: '6LACK',
   full_name: 'Ricardo Valdez Valentine Jr',
   image_url: 'https://i.scdn.co/image/b95bf1fcc0b3491a8623419548a69add9bb5812f',
   user: @user
@@ -190,7 +190,7 @@ puts "#{Artist.count} artists created!"
 
 Song.create!(
   name: 'Circles',
-  release_date: '08/30/2019',
+  release_date: 'August 30, 2019',
   link: 'https://www.youtube.com/watch?v=wXhTHyIgQ_U',
   artist: @post,
   user: @user
@@ -198,7 +198,7 @@ Song.create!(
 
 Song.create!(
   name: 'Going Gets Tough',
-  release_date: '09/23/2014',
+  release_date: 'September 23, 2014',
   link: 'https://www.youtube.com/watch?v=_fL0vu1VwKQ',
   artist: @growlers,
   user: @user
@@ -206,7 +206,7 @@ Song.create!(
 
 Song.create!(
   name: 'Gold (Ft. Yuna)',
-  release_date: '10/29/2013',
+  release_date: 'October 29, 2013',
   link: 'https://www.youtube.com/watch?v=qxiwWqWAa2I',
   artist: @adventure,
   user: @user
@@ -214,7 +214,7 @@ Song.create!(
 
 Song.create!(
   name: 'The Spirit of Radio',
-  release_date: '01/01/1980',
+  release_date: 'January 1, 1980',
   link: 'https://www.youtube.com/watch?v=g_QtO0Rhp0w',
   artist: @rush,
   user: @user
@@ -222,7 +222,7 @@ Song.create!(
 
 Song.create!(
   name: "Don't Stop Me Now",
-  release_date: '01/26/1979',
+  release_date: 'January 26, 1979',
   link: 'https://www.youtube.com/watch?v=HgzGwKwLmgM',
   artist: @queen,
   user: @user
@@ -230,136 +230,154 @@ Song.create!(
 
 Song.create!(
   name: 'Overture – The Marriage of Figaro',
-  release_date: '05/01/1786',
+  release_date: 'May 1, 1786',
   link: 'https://www.youtube.com/watch?v=8mZMEVAlXm0&t',
   artist: @mozart,
   user: @user
 )
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @kshmr
-# )
+Song.create!(
+  name: 'Midnight Lion Walk',
+  release_date: 'March 19, 2021',
+  link: 'https://www.youtube.com/watch?v=Ed5LI5DxZ2I',
+  artist: @kshmr,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @oski
-# )
+Song.create!(
+  name: 'Go My Way (feat. The Arcturians)',
+  release_date: 'May 16, 2017',
+  link: 'https://www.youtube.com/watch?v=zt5Wug7sVmI',
+  artist: @oski,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @weeknd
-# )
+Song.create!(
+  name: 'Blinding Lights',
+  release_date: 'November 29, 2019',
+  link: 'https://www.youtube.com/watch?v=4NRXx6U8ABQ',
+  artist: @weeknd,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @tchami
-# )
+Song.create!(
+  name: 'Praise (feat. Gunna)',
+  release_date: 'October 9, 2020',
+  link: 'https://www.youtube.com/watch?v=fro3lapavWI',
+  artist: @tchami,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @coldplay
-# )
+Song.create!(
+  name: 'Hymn for the Weekend',
+  release_date: 'January 25, 2016',
+  link: 'https://www.youtube.com/watch?v=YykjpeuMNEk',
+  artist: @coldplay,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @stevie
-# )
+Song.create!(
+  name: "Signed, Sealed, Delivered (I'm Yours)",
+  release_date: 'June 3, 1970',
+  link: 'https://www.youtube.com/watch?v=pUj9frKY46E',
+  artist: @stevie,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @nas
-# )
+Song.create!(
+  name: 'N.Y. State of Mind',
+  release_date: 'April 19, 1994',
+  link: 'https://www.youtube.com/watch?v=hI8A14Qcv68',
+  artist: @nas,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @lack
-# )
+Song.create!(
+  name: 'PRBLMS',
+  release_date: 'September 23, 2016',
+  link: 'https://www.youtube.com/watch?v=fS9m0Ac8PCU',
+  artist: @lack,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @maude
-# )
+Song.create!(
+  name: 'One More Weekend',
+  release_date: 'July 24, 2020',
+  link: 'https://www.youtube.com/watch?v=XCel7NDgEUM',
+  artist: @maude,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @max
-# )
+Song.create!(
+  name: 'Love Me Less (feat. Quinn XCII)',
+  release_date: 'April 5, 2019',
+  link: 'https://www.youtube.com/watch?v=ZznsQjzlHIE',
+  artist: @max,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @strokes
-# )
+Song.create!(
+  name: 'Reptilia',
+  release_date: 'October 28, 2003',
+  link: 'https://www.youtube.com/watch?v=b8-tXG8KrWs',
+  artist: @strokes,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @odesza
-# )
+Song.create!(
+  name: 'A Moment Apart',
+  release_date: 'September 8, 2017',
+  link: 'https://www.youtube.com/watch?v=xarC5jAiO7w',
+  artist: @odesza,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @illenium
-# )
+Song.create!(
+  name: 'Good Things Fall Apart (with Jon Bellion)',
+  release_date: 'May 13, 2019',
+  link: 'https://www.youtube.com/watch?v=XpmeVNxZ-Ks',
+  artist: @illenium,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @lilbaby
-# )
+Song.create!(
+  name: 'Drip Too Hard (Lil Baby & Gunna)',
+  release_date: 'September 9, 2018',
+  link: 'https://www.youtube.com/watch?v=_YzD9KW82sk',
+  artist: @lilbaby,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @bryson
-# )
+Song.create!(
+  name: 'Exchange',
+  release_date: 'September 21, 2015',
+  link: 'https://www.youtube.com/watch?v=aj9coPGuFkM',
+  artist: @bryson,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @boogie
-# )
+Song.create!(
+  name: 'Look Back at it',
+  release_date: 'December 7, 2018',
+  link: 'https://www.youtube.com/watch?v=DmNfT-B7nlA',
+  artist: @boogie,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @glass
-# )
+Song.create!(
+  name: 'Heat Waves',
+  release_date: 'June 29, 2020',
+  link: 'https://www.youtube.com/watch?v=mRD0-GxqHVo',
+  artist: @glass,
+  user: @user
+)
 
-# Song.create!(
-#   name: '',
-#   release_date: '',
-#   link: '',
-#   artist: @tame
-# )
+Song.create!(
+  name: 'The Less I Know the Better',
+  release_date: 'July 17, 2015',
+  link: 'https://www.youtube.com/watch?v=2SUwOgmvzK4',
+  artist: @tame,
+  user: @user
+)
 
 puts "#{Song.count} songs created!"
