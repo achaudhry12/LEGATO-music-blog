@@ -189,171 +189,177 @@ puts "#{User.count} users created!"
 puts "#{Artist.count} artists created!"
 
 Song.create!(
-  name:
-  release_date:
-  link:
-  artist: @post
+  name: 'Circles',
+  release_date: '08/30/2019',
+  link: 'https://www.youtube.com/watch?v=wXhTHyIgQ_U',
+  artist: @post,
+  user: @user
 )
 
 Song.create!(
-  name:
-  release_date:
-  link:
-  artist: @growlers
+  name: 'Going Gets Tough',
+  release_date: '09/23/2014',
+  link: 'https://www.youtube.com/watch?v=_fL0vu1VwKQ',
+  artist: @growlers,
+  user: @user
 )
 
 Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
+  name: 'Gold (Ft. Yuna)',
+  release_date: '10/29/2013',
+  link: 'https://www.youtube.com/watch?v=qxiwWqWAa2I',
+  artist: @adventure,
+  user: @user
 )
 
 Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
+  name: 'The Spirit of Radio',
+  release_date: '01/01/1980',
+  link: 'https://www.youtube.com/watch?v=g_QtO0Rhp0w',
+  artist: @rush,
+  user: @user
 )
 
 Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
+  name: "Don't Stop Me Now",
+  release_date: '01/26/1979',
+  link: 'https://www.youtube.com/watch?v=HgzGwKwLmgM',
+  artist: @queen,
+  user: @user
 )
 
 Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
+  name: 'Overture – The Marriage of Figaro',
+  release_date: '05/01/1786',
+  link: 'https://www.youtube.com/watch?v=8mZMEVAlXm0&t',
+  artist: @mozart,
+  user: @user
 )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @kshmr
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @oski
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @weeknd
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @tchami
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @coldplay
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @stevie
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @nas
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @lack
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @maude
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @max
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @strokes
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @odesza
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @illenium
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @lilbaby
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @bryson
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @boogie
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @glass
+# )
 
-Song.create!(
-  name:
-  release_date:
-  link:
-  artist: 
-)
+# Song.create!(
+#   name: '',
+#   release_date: '',
+#   link: '',
+#   artist: @tame
+# )
 
 puts "#{Song.count} songs created!"
