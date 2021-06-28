@@ -75,22 +75,19 @@ export default function MainContainer() {
 	return (
 		<div>
 			<Switch>
-				<Route path='/artists'>
+				<Route path='artists'>
           <Artists artists={artists} />
 				</Route>
 				<Route path='/artists/:id'>
           <ArtistDetail artists={artists} handleDelete={handleDeleteSong} />
         </Route>
-        {/* <Route path='/artist/edit'>
-					<ArtistEdit />
-				</Route> */}
-				<Route path='/artists/new'>
+        <Route path='/artists/create'>
 					<ArtistCreate artists={artists} handleCreate={handleCreateArtist} />
 				</Route>
 				<Route path='/artists/:id/songs'>
           <SongCreate songs={songs} handleCreate={handleCreateSong}/>
 				</Route>
-				<Route path='artists/:id/songs/:id'>
+				<Route path='/artists/:id/songs/:id'>
           <SongEdit songs={songs} handleUpdate={handleUpdateSong} />
 				</Route>
 			</Switch>
