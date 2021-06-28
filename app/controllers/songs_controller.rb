@@ -6,7 +6,7 @@ class SongsController < ApplicationController
     @artist = Artist.find(params[:artist_id])
     @songs = Song.where(artist_id: @artist.id)
 
-    render json: @songs, include: :artist
+    render json: @songs, include: :artists
   end
 
   # POST /artist/1/songs
@@ -15,7 +15,7 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
 
     if @song.save
-      render json: @song, include: :artist, status: :created
+      render json: @song, include: :artists, status: :created
     else
       render json: @song.errors, status: :unprocessable_entity
     end
@@ -24,7 +24,7 @@ class SongsController < ApplicationController
   # PATCH/PUT /artist/1/songs/1
   def update
     if @song.update(song_params)
-      render json: @song, include: :artist
+      render json: @song, include: :artists
     else
       render json: @song.errors, status: :unprocessable_entity
     end
