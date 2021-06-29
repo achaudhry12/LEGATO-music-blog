@@ -6,21 +6,21 @@ import { getOneArtist } from "../services/artists";
 
 export default function Songs(props) {
   const { songs } = props;
-  const [artist, setArtist] = useState([null]);
+  const [ artists, setArtists ] = useState([null]);
   const { id } = useParams();
   
   useEffect(() => {
-    const fetchArtist = async () => {
+    const fetchArtists = async () => {
       const artistInfo = await getOneArtist(id);
-      setArtist(artistInfo);
+      setArtists(artistInfo);
     };
-    fetchArtist();
-  }, [id]);
+    fetchArtists();
+  }, [setArtists, id]);
 
   return (
     <div className="artist-body">
       <h1>SONGS</h1>
-      <Link to={`/artists/${artist.id}/songs/create`}>
+      <Link to={`/artists/${artists.id}/songs/create`}>
         <button>ADD SONG</button>
       </Link>
       <div>

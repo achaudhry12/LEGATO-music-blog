@@ -1,0 +1,25 @@
+.home-text {
+  background-color: lightgray;
+  padding: 10px;
+  margin: auto;
+  width: 70%;
+  border: 5px solid slategray;
+  border-radius: 50px;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.home-buttons {
+  background-color: lightgray;
+  padding: 10px;
+  margin: auto;
+  width: 70%;
+  border: 5px solid slategray;
+  border-radius: 50px;
+}
+
+.home-buttons button{
+  width: 50%;
+  margin: auto;
+  background-color: white;
+}

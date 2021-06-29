@@ -8,6 +8,7 @@ import "../assets/css/ArtistDetail.css";
 export default function ArtistDetail(props) {
   const [artist, setArtist] = useState([null]);
   const { id } = useParams();
+  const { handleDelete } = props;
   // const { songs } = props;
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function ArtistDetail(props) {
     <>
       <br />
       <br />
-      <br/>
+      <br />
       <div class="artist-detail-container">
         <div className="artist-detail-image">
           <img
@@ -40,15 +41,18 @@ export default function ArtistDetail(props) {
             {artist.full_name}
           </p>
         </div>
-      <div className="artist-show-songs">
-        <Link to={`/artists/${artist.id}/songs`}>
-          <button>Show Songs</button>
-        </Link>
-      </div>
+        <div className="artist-show-songs">
+          <Link to={`/artists/${artist.id}/songs`}>
+            <button>SHOW SONGS</button>
+          </Link>
+        </div>
+        <div className="artist-delete">
+          <button onClick={() => handleDelete(artist.id)}>DELETE</button>
+        </div>
       </div>
       <br />
       <br />
-      <br/>
+      <br />
     </>
   );
 }

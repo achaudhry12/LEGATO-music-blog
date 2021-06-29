@@ -1,4 +1,5 @@
 import './App.css';
+import Homepage from './screens/Homepage'
 import Layout from './layouts/Layout';
 import Login from './screens/Login';
 import Register from './screens/Register';
@@ -43,18 +44,21 @@ function App() {
 	};
 
 	return (
-		<div className='App'>
+    <div className='App'>
 			<Layout currentUser={currentUser} handleLogout={handleLogout}>
-				<Switch>
+        <Switch>
 					<Route path='/login'>
 						<Login handleLogin={handleLogin} />
 					</Route>
 					<Route path='/register'>
 						<Register handleRegister={handleRegister} />
 					</Route>
-					<Route path='/'>
+					<Route path='/artists'>
 						<MainContainer />
 					</Route>
+          <Route path='/'>
+            <Homepage />
+          </Route>
 				</Switch>
 			</Layout>
 		</div>
