@@ -11,6 +11,6 @@ export const getOneArtist = async (id) => {
 };
 
 export const postArtist = async () => {
-	const resp = await api.post('/artists/new');
+	const resp = await api.post('/artists/create');
 	return resp.data;
 };

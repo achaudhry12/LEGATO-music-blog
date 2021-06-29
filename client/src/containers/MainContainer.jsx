@@ -51,6 +51,11 @@ export default function MainContainer() {
 	// 	history.push('/song');
   // };
 
+  // const handleDeleteSong = async (id) => {
+	// 	await deleteSong(id);
+	// 	setSongs((prevState) => prevState.filter((song) => song.id !== id));
+	// };
+
 	const handleCreateSong = async (artistId, formData) => {
 		const songItem = await postSong(formData);
 		setSongs((prevState) => [...prevState, songItem]);
@@ -75,20 +80,20 @@ export default function MainContainer() {
 	return (
 		<div>
 			<Switch>
-				<Route path='/artists'>
-          <Artists artists={artists} />
-				</Route>
-				<Route path='/artists/:id'>
-          <ArtistDetail artists={artists} handleDelete={handleDeleteSong} />
-        </Route>
-        <Route path='/artists/create'>
-					<ArtistCreate artists={artists} handleCreate={handleCreateArtist} />
+				<Route path='/artists/:id/songs/:id'>
+          <SongEdit songs={songs} handleUpdate={handleUpdateSong} />
 				</Route>
 				<Route path='/artists/:id/songs'>
           <SongCreate songs={songs} handleCreate={handleCreateSong}/>
 				</Route>
-				<Route path='/artists/:id/songs/:id'>
-          <SongEdit songs={songs} handleUpdate={handleUpdateSong} />
+        <Route path='/artists/create'>
+					<ArtistCreate artists={artists} handleCreate={handleCreateArtist} />
+				</Route>
+				<Route path='/artists/:id'>
+          <ArtistDetail artists={artists} songs={songs} handleDelete={handleDeleteSong} />
+        </Route>
+				<Route path='/artists'>
+          <Artists artists={artists} songs={songs}/>
 				</Route>
 			</Switch>
 		</div>

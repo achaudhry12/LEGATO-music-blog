@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../assets/css/Artists.css";
 
-export default function Artists(props) {
+export default function Songs(props) {
   const { artists } = props;
 
   return (
     <div className="artist-body">
-      <h1>ARTISTS</h1>
-      <Link to="/artists/create">
-        <button>ADD ARTIST</button>
+      <h1>SONGS</h1>
+      <Link to={`/artists/${artist.id}/songs/create`}>
+        <button>ADD SONG</button>
       </Link>
       {artists.map((artist) => (
         <Link to={`/artists/${artist.id}`}>

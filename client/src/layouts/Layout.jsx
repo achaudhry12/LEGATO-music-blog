@@ -5,8 +5,10 @@ export default function Layout(props) {
 	const { currentUser, handleLogout, children } = props;
 	return (
 		<div className="layout-contianer">
-			<header>
-        <h1>LEGATO</h1>
+      <header>
+        <Link to='/artists'>
+          <h1>LEGATO</h1>
+        </Link>
         <h3>MUSIC BLOG</h3>
 				{currentUser ? (
 					<>

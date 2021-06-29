@@ -5,19 +5,20 @@
 .artist-container{
   height: 200px;
   width: 75%;
-  border: 1px solid silver;
+  border: 5px solid silver;
   border-radius: 20px;
   transform: translate(17%);
   display: flex;
   flex-direction: row;
   margin: 50px 0px;
   color: black;
+  background-color: white;
 }
 
 .artist-image-container{
   height: 200px;
   width: 200px;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   margin-right: 50px;
 }
@@ -27,6 +28,7 @@
 }
 
 .artist-text-contianer{
+  text-align: left;
   flex-direction: column;
   margin-right: 25px;
 }
