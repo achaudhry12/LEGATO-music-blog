@@ -54,3 +54,49 @@
   cursor: pointer;
   box-shadow: 1px 1px 15px 1px black;
 }
+
+@media only screen and (max-width: 770px) {
+  .title_div .title {
+    font-size: 50px;
+    margin-left: 100px;
+  }
+  .title_div .subtitle {
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .login-buttons {
+    padding-top: 35px;
+    padding-left: 100px;
+    padding-bottom: 35px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .title_div .title {
+    font-size: 40px;
+    margin-left: 40px;
+  }
+  .title_div .subtitle {
+    font-size: 20px;
+    margin-left: 40px;
+  }
+  .login-buttons {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+  .login-buttons button{
+    width: 40px;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: lightgray;
+  }
+  .login-buttons button{
+    width: 40px;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: lightgray;
+  }
+}

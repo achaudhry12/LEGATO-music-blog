@@ -99,3 +99,80 @@ a:link{
 .ud-buttons button:hover{
   cursor: pointer;
 }
+
+@media only screen and (max-width: 770px) {
+  .artist-body .title{
+    font-size: 40px;
+  }
+  .artist-container {
+    height: 150px;
+    width: 55%;
+    margin: 30px auto;
+    grid-template-columns: 150px 20px auto 20px 50px;
+  }
+  .artist-image-container {
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .artist-text-contianer h2{
+    font-size: 22px;
+  }
+  .artist-text-contianer p{
+    font-size: 13px;
+  }
+  .ud-buttons {
+    grid-column: 5;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .artist-body .title{
+    font-size: 24px;
+  }
+  .artist-container {
+    height: 75px;
+    width: 70%;
+    margin: 20px auto;
+    grid-template-columns: 75px 10px auto 5px 40px;
+  }
+  .artist-image-container {
+    height: 75px;
+    width: 75px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .artist-text-contianer h2{
+    font-size: 13px;
+  }
+  .artist-text-contianer p{
+    font-size: 9px;
+  }
+  .ud-buttons {
+    grid-column: 5;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    margin-right: 30px;
+  }
+  .add-button {
+    font-size: 15px;
+    width: 50%;
+    transform: translate(50%);
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 50px;
+    margin-top: 15px;
+    padding: 10px;
+  }
+}
