@@ -6,7 +6,7 @@ export const getAllSongs = async (artistId) => {
 };
 
 export const postSong = async (artistId, songData) => {
-	const resp = await api.post(`/artists/${artistId}/songs`, { song: songData });
+	const resp = await api.post(`/artists/${artistId}/songs/create`, { song: songData });
 	return resp.data;
 };
 

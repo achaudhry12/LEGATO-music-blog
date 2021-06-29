@@ -7,6 +7,7 @@ import Artists from '../screens/Artists';
 import ArtistDetail from '../screens/ArtistDetail';
 // import ArtistEdit from '../screens/ArtistEdit';
 import ArtistCreate from '../screens/ArtistCreate';
+import Songs from '../screens/Songs';
 import SongCreate from '../screens/SongCreate';
 import SongEdit from '../screens/SongEdit'
 
@@ -72,28 +73,32 @@ export default function MainContainer() {
 		history.push(`/artists/${artistId}/songs`);
   };
   
-	const handleDeleteSong = async (id) => {
+	const handleDeleteSong = async (artistId, id) => {
 		await deleteSong(id);
-		setSongs((prevState) => prevState.filter((song) => song.id !== id));
+    setSongs((prevState) => prevState.filter((song) => song.id !== id));
+    history.push(`/artists/${artistId}/songs`)
 	};
 
 	return (
 		<div>
 			<Switch>
 				<Route path='/artists/:id/songs/:id'>
-          <SongEdit songs={songs} handleUpdate={handleUpdateSong} />
+          <SongEdit artists={artists} songs={songs} handleUpdate={handleUpdateSong} />
+        </Route>
+        <Route path='/artists/:id/songs/create'>
+          <SongCreate artists={artists} songs={songs} handleCreate={handleCreateSong}/>
 				</Route>
 				<Route path='/artists/:id/songs'>
-          <SongCreate songs={songs} handleCreate={handleCreateSong}/>
+          <Songs artists={artists} songs={songs} />
 				</Route>
         <Route path='/artists/create'>
 					<ArtistCreate artists={artists} handleCreate={handleCreateArtist} />
 				</Route>
 				<Route path='/artists/:id'>
-          <ArtistDetail artists={artists} songs={songs} handleDelete={handleDeleteSong} />
+          <ArtistDetail artists={artists} handleDelete={handleDeleteSong} />
         </Route>
 				<Route path='/artists'>
-          <Artists artists={artists} songs={songs}/>
+          <Artists artists={artists} />
 				</Route>
 			</Switch>
 		</div>
