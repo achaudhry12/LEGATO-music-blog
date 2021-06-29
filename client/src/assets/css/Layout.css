@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .title-container{
   display: flex;
   flex-direction: row;
@@ -5,14 +7,25 @@
   justify-content: center;
 }
 
-.title {
+.title_div {
+  font-family: 'Permanent Marker', cursive;
   display: flex;
   flex-direction: row;
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
-  font-size: 65px;
+}
+
+.title_div p{
+  margin: 0;
   color: black;
-  font-weight: 900;
+}
+
+.title_div .title {
+  font-size: 80px;
+}
+
+.title_div .subtitle {
+  font-size: 40px;
 }
 
 .title_name {

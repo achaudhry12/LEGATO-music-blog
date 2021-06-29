@@ -6,9 +6,10 @@ export default function Layout(props) {
 	return (
 		<div className="layout-container">
       <div className="title-container">
-        <div className="title">
+        <div className="title_div">
         <Link class='title_name' to='/artists'>
-          <p>LEGATO</p>
+            <p class='title'>Legato</p>
+            <p class='subtitle'>music blog</p>
         </Link>
         </div>
         <div className='login-buttons'>

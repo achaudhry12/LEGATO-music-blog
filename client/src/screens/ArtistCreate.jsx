@@ -18,52 +18,58 @@ export default function ArtistCreate(props) {
   };
 
   return (
-    <div className="container">
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleCreate(formData);
-      }}
-      >
-      <h2>ADD ARTIST</h2>
-      <div className="text-field">
-        <label>
-          <p>Stage Name</p>
-          <input
-            type='text'
-            name='stage_name'
-            value={stage_name}
-            onChange={handleChange}
-            />
-        </label>
+    <>
+      <br />
+      <div className="container">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleCreate(formData);
+          }}
+        >
+          <h2>ADD ARTIST</h2>
+          <div className="text-field">
+            <label>
+              <p>Stage Name</p>
+              <input
+                type="text"
+                name="stage_name"
+                value={stage_name}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <br />
+          <div className="text-field">
+            <label>
+              <p>Full Name</p>
+              <input
+                type="text"
+                name="full_name"
+                value={full_name}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <br />
+          <div className="text-field">
+            <label>
+              <p>Image URL</p>
+              <input
+                type="text"
+                name="image_url"
+                value={image_url}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <br />
+          <button className="submit-button">SUBMIT</button>
+        </form>
       </div>
       <br />
-      <div className="text-field">
-        <label>
-        <p>Full Name</p>
-          <input
-            type='text'
-            name='full_name'
-            value={full_name}
-            onChange={handleChange}
-            />
-        </label>
-      </div>
       <br />
-      <div className="text-field">
-        <label>
-        <p>Image URL</p>
-          <input
-            type='text'
-            name='image_url'
-            value={image_url}
-            onChange={handleChange}
-            />
-        </label>
-      </div>
       <br />
-      <button className="submit-button">SUBMIT</button>
-      </form>
-    </div>
+    </>
   );
 }
