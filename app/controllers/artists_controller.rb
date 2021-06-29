@@ -27,6 +27,20 @@ class ArtistsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /foods/1
+  def update
+    if @artist.update(artist_params)
+      render json: @artist, include: :songs
+    else
+      render json: @artist.errors, status: :unprocessable_entity
+    end
+  end
+
+  # DELETE /foods/1
+  def destroy
+    @artist.destroy
+  end
+
   private
 
     # Only allow a list of trusted parameters through.
