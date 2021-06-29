@@ -25,12 +25,12 @@ puts "#{User.count} users created!"
   user: @user
 )
 
-@growlers = Artist.create!(
-  stage_name: 'The Growlers',
-  full_name: 'Brooks Nielsen, Kyle Straka, Brad Bowers, Richard Gowen',
-  image_url: 'https://i.scdn.co/image/83bf768c4e19fc222bccf05b45e149581bc72bdb',
-  user: @user
-)
+# @growlers = Artist.create!(
+#   stage_name: 'The Growlers',
+#   full_name: 'Brooks Nielsen, Kyle Straka, Brad Bowers, Richard Gowen',
+#   image_url: 'https://i.scdn.co/image/83bf768c4e19fc222bccf05b45e149581bc72bdb',
+#   user: @user
+# )
 
 @adventure = Artist.create!(
   stage_name: 'Adventure Club',
@@ -46,12 +46,12 @@ puts "#{User.count} users created!"
   user: @user
 )
 
-@queen = Artist.create!(
-  stage_name: 'Queen',
-  full_name: 'Freddie Mercury, Brain May, Roger Taylor, John Deacon',
-  image_url: 'https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42',
-  user: @user
-)
+# @queen = Artist.create!(
+#   stage_name: 'Queen',
+#   full_name: 'Freddie Mercury, Brain May, Roger Taylor, John Deacon',
+#   image_url: 'https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42',
+#   user: @user
+# )
 
 @mozart = Artist.create!(
   stage_name: 'Mozart',
@@ -88,12 +88,12 @@ puts "#{User.count} users created!"
   user: @user
 )
 
-@coldplay = Artist.create!(
-  stage_name: 'Coldplay',
-  full_name: 'Chris Martin, Jonny Buckland, Guy Berryman, Will Champion',
-  image_url: 'https://i.scdn.co/image/ab6761610000e5eb3bcd1c4d6f324498d3de6f8d',
-  user: @user
-)
+# @coldplay = Artist.create!(
+#   stage_name: 'Coldplay',
+#   full_name: 'Chris Martin, Jonny Buckland, Guy Berryman, Will Champion',
+#   image_url: 'https://i.scdn.co/image/ab6761610000e5eb3bcd1c4d6f324498d3de6f8d',
+#   user: @user
+# )
 
 @stevie = Artist.create!(
   stage_name: 'Stevie Wonder',
@@ -130,12 +130,12 @@ puts "#{User.count} users created!"
   user: @user
 )
 
-@strokes = Artist.create!(
-  stage_name: 'The Strokes',
-  full_name: 'Julian Casablancas, Nick Valensi, Albert Hammond Jr., Nikolai Fraiture, Fabrizio Moretti',
-  image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/The_Strokes_by_Roger_Woolman.jpg/1200px-The_Strokes_by_Roger_Woolman.jpg',
-  user: @user
-)
+# @strokes = Artist.create!(
+#   stage_name: 'The Strokes',
+#   full_name: 'Julian Casablancas, Nick Valensi, Albert Hammond Jr., Nikolai Fraiture, Fabrizio Moretti',
+#   image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/The_Strokes_by_Roger_Woolman.jpg/1200px-The_Strokes_by_Roger_Woolman.jpg',
+#   user: @user
+# )
 
 @odesza = Artist.create!(
   stage_name: 'ODESZA',
@@ -172,12 +172,12 @@ puts "#{User.count} users created!"
   user: @user
 )
 
-@glass = Artist.create!(
-  stage_name: 'Glass Animals',
-  full_name: 'Dave Bayley, Drew MacFarlane, Edmund Irwin-Singer, Joe Seaward',
-  image_url: 'https://i.scdn.co/image/f282504561b0c2b2ec74925793bbf132982e9098',
-  user: @user
-)
+# @glass = Artist.create!(
+#   stage_name: 'Glass Animals',
+#   full_name: 'Dave Bayley, Drew MacFarlane, Edmund Irwin-Singer, Joe Seaward',
+#   image_url: 'https://i.scdn.co/image/f282504561b0c2b2ec74925793bbf132982e9098',
+#   user: @user
+# )
 
 @tame = Artist.create!(
   stage_name: 'Tame Impala',
@@ -196,13 +196,13 @@ puts "#{Artist.count} artists created!"
   user: @user
 )
 
-@growlersSong = Song.create!(
-  name: 'Going Gets Tough',
-  release_date: 'September 23, 2014',
-  link: 'https://www.youtube.com/watch?v=_fL0vu1VwKQ',
-  artist: @growlers,
-  user: @user
-)
+# @growlersSong = Song.create!(
+#   name: 'Going Gets Tough',
+#   release_date: 'September 23, 2014',
+#   link: 'https://www.youtube.com/watch?v=_fL0vu1VwKQ',
+#   artist: @growlers,
+#   user: @user
+# )
 
 @adventureSong = Song.create!(
   name: 'Gold (Ft. Yuna)',
@@ -220,13 +220,13 @@ puts "#{Artist.count} artists created!"
   user: @user
 )
 
-@queenSong = Song.create!(
-  name: "Don't Stop Me Now",
-  release_date: 'January 26, 1979',
-  link: 'https://www.youtube.com/watch?v=HgzGwKwLmgM',
-  artist: @queen,
-  user: @user
-)
+# @queenSong = Song.create!(
+#   name: "Don't Stop Me Now",
+#   release_date: 'January 26, 1979',
+#   link: 'https://www.youtube.com/watch?v=HgzGwKwLmgM',
+#   artist: @queen,
+#   user: @user
+# )
 
 @mozartSong = Song.create!(
   name: 'Overture – The Marriage of Figaro',
@@ -268,13 +268,13 @@ puts "#{Artist.count} artists created!"
   user: @user
 )
 
-@coldplaySong = Song.create!(
-  name: 'Hymn for the Weekend',
-  release_date: 'January 25, 2016',
-  link: 'https://www.youtube.com/watch?v=YykjpeuMNEk',
-  artist: @coldplay,
-  user: @user
-)
+# @coldplaySong = Song.create!(
+#   name: 'Hymn for the Weekend',
+#   release_date: 'January 25, 2016',
+#   link: 'https://www.youtube.com/watch?v=YykjpeuMNEk',
+#   artist: @coldplay,
+#   user: @user
+# )
 
 @stevieSong = Song.create!(
   name: "Signed, Sealed, Delivered (I'm Yours)",
@@ -316,13 +316,13 @@ puts "#{Artist.count} artists created!"
   user: @user
 )
 
-@strokesSong = Song.create!(
-  name: 'Reptilia',
-  release_date: 'October 28, 2003',
-  link: 'https://www.youtube.com/watch?v=b8-tXG8KrWs',
-  artist: @strokes,
-  user: @user
-)
+# @strokesSong = Song.create!(
+#   name: 'Reptilia',
+#   release_date: 'October 28, 2003',
+#   link: 'https://www.youtube.com/watch?v=b8-tXG8KrWs',
+#   artist: @strokes,
+#   user: @user
+# )
 
 @Song = Song.create!(
   name: 'A Moment Apart',
@@ -364,13 +364,13 @@ puts "#{Artist.count} artists created!"
   user: @user
 )
 
-@glassSong = Song.create!(
-  name: 'Heat Waves',
-  release_date: 'June 29, 2020',
-  link: 'https://www.youtube.com/watch?v=mRD0-GxqHVo',
-  artist: @glass,
-  user: @user
-)
+# @glassSong = Song.create!(
+#   name: 'Heat Waves',
+#   release_date: 'June 29, 2020',
+#   link: 'https://www.youtube.com/watch?v=mRD0-GxqHVo',
+#   artist: @glass,
+#   user: @user
+# )
 
 @tameSong = Song.create!(
   name: 'The Less I Know the Better',
