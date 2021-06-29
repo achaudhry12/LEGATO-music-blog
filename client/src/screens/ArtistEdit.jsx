@@ -23,7 +23,7 @@ export default function FoodEdit(props) {
 		if (artists.length) {
 			prefillFormData();
 		}
-	}, [artists]);
+	}, [artists, id]);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;

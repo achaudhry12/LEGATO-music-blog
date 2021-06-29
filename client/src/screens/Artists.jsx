@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/Artists.css";
-import remove from "../assets/imgs/Remove.png"
 import edit from "../assets/imgs/edit_icon.png"
 
 export default function Artists(props) {
-  const { artists, handleDelete } = props;
+  const { artists } = props;
 
   return (
     <>
