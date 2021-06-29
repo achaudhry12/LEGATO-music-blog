@@ -9,12 +9,12 @@ import ArtistDetail from '../screens/ArtistDetail';
 import ArtistEdit from '../screens/ArtistEdit';
 import ArtistCreate from '../screens/ArtistCreate';
 import Songs from '../screens/Songs';
-// import SongCreate from '../screens/SongCreate';
+import SongCreate from '../screens/SongCreate';
 // import SongEdit from '../screens/SongEdit'
 
 // Services
 import { getAllArtists, postArtist, putArtist, deleteArtist } from '../services/artists';
-import { getAllSongs } from '../services/songs';
+import { getAllSongs, postSong } from '../services/songs';
 
 export default function MainContainer() {
 	const [artists, setArtists] = useState([]);
@@ -59,11 +59,11 @@ export default function MainContainer() {
     history.push('/artists');
 	};
 
-	// const handleCreateSong = async (artistId, formData) => {
-	// 	const songItem = await postSong(formData);
-	// 	setSongs((prevState) => [...prevState, songItem]);
-	// 	history.push(`/artists/${artistId}/songs`);
-	// };
+	const handleCreateSong = async (artistId, formData) => {
+		const songItem = await postSong(formData);
+		setSongs((prevState) => [...prevState, songItem]);
+		history.push(`/artists/${artistId}/songs`);
+	};
 
 	// const handleUpdateSong = async (artistId, id, formData) => {
 	// 	const songItem = await putSong(id, formData);
@@ -87,9 +87,9 @@ export default function MainContainer() {
 				{/* <Route path='/artists/:id/songs/:id'>
           <SongEdit artists={artists} songs={songs} handleUpdate={handleUpdateSong} />
         </Route> */}
-        {/* <Route path='/artists/:id/songs/create'>
+        <Route path='/artists/:id/songs/create'>
           <SongCreate artists={artists} songs={songs} handleCreate={handleCreateSong}/>
-				</Route> */}
+				</Route>
 				<Route path='/artists/:id/songs'>
           <Songs artists={artists} songs={songs} />
         </Route>

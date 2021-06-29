@@ -5,10 +5,10 @@ export const getAllSongs = async (id) => {
 	return resp.data;
 };
 
-// export const postSong = async (artistId, songData) => {
-// 	const resp = await api.post(`/artists/${artistId}/songs`, { song: songData });
-// 	return resp.data;
-// };
+export const postSong = async (artistId, songData) => {
+	const resp = await api.post(`/artists/${artistId}/songs`, { song: songData });
+	return resp.data;
+};
 
 // export const putSong = async (artistId, id, songData) => {
 // 	const resp = await api.put(`/artists/${artistId}/songs/${id}`, { song: songData });

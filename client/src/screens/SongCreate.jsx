@@ -18,6 +18,9 @@ export default function SongCreate(props) {
   };
 
   return (
+    <>
+      <br />
+      <br />
     <div className="container">
     <form
       onSubmit={(e) => {
@@ -25,7 +28,7 @@ export default function SongCreate(props) {
         handleCreate(formData);
       }}
       >
-      <h2>ADD ARTIST</h2>
+      <h2>ADD SONG</h2>
       <div className="text-field">
         <label>
           <p>Name</p>
@@ -64,6 +67,10 @@ export default function SongCreate(props) {
       <br />
       <button className="submit-button">SUBMIT</button>
       </form>
-    </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      </>
   );
 }
