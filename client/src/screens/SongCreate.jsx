@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom"
 
 export default function SongCreate(props) {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ export default function SongCreate(props) {
   });
   const { name, release_date, link } = formData;
   const { handleCreate } = props;
+  const { id } = useParams();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,7 +27,7 @@ export default function SongCreate(props) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        handleCreate(formData);
+        handleCreate(id, formData);
       }}
       >
       <h2>ADD SONG</h2>

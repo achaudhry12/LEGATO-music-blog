@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: :create
 
   # GET /artist/1/songs
   def index
@@ -11,8 +12,9 @@ class SongsController < ApplicationController
 
   # POST /artist/1/songs
   def create
-    @artist = Artist.find(params[:id])
-    @song = Song.new(song_params)
+    @artist = Artist.find(params[:artist_id])
+    @song = Song.where(artist_id: @artist.id).new(song_params)
+    @song.user = @current_user
 
     if @song.save
       render json: @song, include: :artists, status: :created

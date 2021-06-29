@@ -60,7 +60,7 @@ export default function MainContainer() {
 	};
 
 	const handleCreateSong = async (artistId, formData) => {
-		const songItem = await postSong(formData);
+		const songItem = await postSong(artistId, formData);
 		setSongs((prevState) => [...prevState, songItem]);
 		history.push(`/artists/${artistId}/songs`);
 	};

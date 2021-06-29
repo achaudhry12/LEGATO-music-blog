@@ -40,7 +40,7 @@ export default function FoodEdit(props) {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            handleUpdate(formData);
+            handleUpdate(id, formData);
           }}
         >
           <h2>EDIT ARTIST</h2>
@@ -82,7 +82,7 @@ export default function FoodEdit(props) {
           <br />
           <button className="submit-button">SUBMIT</button>
           <br />
-          <button className="register-button" onClick={() => handleDelete(artists.id)}>DELETE</button>
+          <button className="register-button" onClick={() => handleDelete(id)}>DELETE</button>
         </form>
       </div>
       <br />

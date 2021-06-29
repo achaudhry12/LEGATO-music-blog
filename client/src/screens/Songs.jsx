@@ -6,7 +6,7 @@ import { getOneArtist } from "../services/artists";
 import "../assets/css/Songs.css"
 
 export default function Songs(props) {
-  const { songs } = props;
+  // const { songs } = props;
   const [ artists, setArtists ] = useState([null]);
   const { id } = useParams();
   
@@ -30,7 +30,7 @@ export default function Songs(props) {
       <br />
       <br />
       <div>
-      {songs.map((song) => (
+      {artists?.songs?.map((song) => (
         <div className="song-container">
           <p key={song.id}>{song.name}</p>
         </div>

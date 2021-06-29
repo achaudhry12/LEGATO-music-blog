@@ -11,7 +11,7 @@ class ArtistsController < ApplicationController
 
   # GET /artists/1
   def show 
-    render json: @artists, include: :songs
+    render json: @artist, include: :songs
   end
 
   # POST /artists
@@ -42,10 +42,10 @@ class ArtistsController < ApplicationController
 
   private
     def set_artist
-      @artists = Artist.find(params[:id])
+      @artist = Artist.find(params[:id])
     end
 
     def artist_params
-      params.require(:artist).permit(:stage_name, :full_name, :image_url)
+      params.require(:artist).permit(:stage_name, :full_name, :image_url, :user_id)
     end
 end
