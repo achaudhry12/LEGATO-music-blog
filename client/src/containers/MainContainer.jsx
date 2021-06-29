@@ -5,15 +5,15 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 // Custom Components
 import Artists from '../screens/Artists';
 import ArtistDetail from '../screens/ArtistDetail';
-// import ArtistEdit from '../screens/ArtistEdit';
+import ArtistEdit from '../screens/ArtistEdit';
 import ArtistCreate from '../screens/ArtistCreate';
 import Songs from '../screens/Songs';
-import SongCreate from '../screens/SongCreate';
-import SongEdit from '../screens/SongEdit'
+// import SongCreate from '../screens/SongCreate';
+// import SongEdit from '../screens/SongEdit'
 
 // Services
-import { getAllArtists, postArtist } from '../services/artists';
-import { deleteSong, getAllSongs, postSong, putSong } from '../services/songs';
+import { getAllArtists, postArtist, putArtist, deleteArtist } from '../services/artists';
+import { getAllSongs } from '../services/songs';
 
 export default function MainContainer() {
 	const [artists, setArtists] = useState([]);
@@ -36,66 +36,69 @@ export default function MainContainer() {
 		fetchSongs();
 	}, []);
 
-  const handleCreateArtist = async (formData) => {
+  const handleCreate = async (formData) => {
 		const artistItem = await postArtist(formData);
 		setArtists((prevState) => [...prevState, artistItem]);
 		history.push('/artists');
   };
   
-  // const handleUpdateArtist = async (id, formData) => {
-	// 	const artistItem = await putSong(id, formData);
-	// 	setSong((prevState) =>
-	// 		prevState.map((food) => {
+  const handleUpdate = async (id, formData) => {
+		const artistItem = await putArtist(id, formData);
+		setArtists((prevState) =>
+			prevState.map((artist) => {
+				return artist.id === Number(id) ? artistItem : artist;
+			})
+		);
+		history.push('/song');
+  };
+
+  const handleDelete = async (id) => {
+		await deleteArtist(id);
+		setArtists((prevState) => prevState.filter((artist) => artist.id !== id));
+	};
+
+	// const handleCreateSong = async (artistId, formData) => {
+	// 	const songItem = await postSong(formData);
+	// 	setSongs((prevState) => [...prevState, songItem]);
+	// 	history.push(`/artists/${artistId}/songs`);
+	// };
+
+	// const handleUpdateSong = async (artistId, id, formData) => {
+	// 	const songItem = await putSong(id, formData);
+	// 	setSongs((prevState) =>
+	// 		prevState.map((song) => {
 	// 			return song.id === Number(id) ? songItem : song;
 	// 		})
 	// 	);
-	// 	history.push('/song');
+	// 	history.push(`/artists/${artistId}/songs`);
   // };
-
-  // const handleDeleteSong = async (id) => {
-	// 	await deleteSong(id);
-	// 	setSongs((prevState) => prevState.filter((song) => song.id !== id));
-	// };
-
-	const handleCreateSong = async (artistId, formData) => {
-		const songItem = await postSong(formData);
-		setSongs((prevState) => [...prevState, songItem]);
-		history.push(`/artists/${artistId}/songs`);
-	};
-
-	const handleUpdateSong = async (artistId, id, formData) => {
-		const songItem = await putSong(id, formData);
-		setSongs((prevState) =>
-			prevState.map((song) => {
-				return song.id === Number(id) ? songItem : song;
-			})
-		);
-		history.push(`/artists/${artistId}/songs`);
-  };
   
-	const handleDeleteSong = async (artistId, id) => {
-		await deleteSong(id);
-    setSongs((prevState) => prevState.filter((song) => song.id !== id));
-    history.push(`/artists/${artistId}/songs`)
-	};
+	// const handleDeleteSong = async (artistId, id) => {
+	// 	await deleteSong(id);
+  //   setSongs((prevState) => prevState.filter((song) => song.id !== id));
+  //   history.push(`/artists/${artistId}/songs`)
+	// };
 
 	return (
 		<div>
 			<Switch>
-				<Route path='/artists/:id/songs/:id'>
+				{/* <Route path='/artists/:id/songs/:id'>
           <SongEdit artists={artists} songs={songs} handleUpdate={handleUpdateSong} />
-        </Route>
-        <Route path='/artists/:id/songs/create'>
+        </Route> */}
+        {/* <Route path='/artists/:id/songs/create'>
           <SongCreate artists={artists} songs={songs} handleCreate={handleCreateSong}/>
-				</Route>
+				</Route> */}
 				<Route path='/artists/:id/songs'>
           <Songs artists={artists} songs={songs} />
-				</Route>
+        </Route>
+        <Route path='/artists/:id/edit'>
+          <ArtistEdit artists={artists} handleDelete={handleUpdate} />
+        </Route>
         <Route path='/artists/create'>
-					<ArtistCreate artists={artists} handleCreate={handleCreateArtist} />
+					<ArtistCreate artists={artists} handleCreate={handleCreate} />
 				</Route>
 				<Route path='/artists/:id'>
-          <ArtistDetail artists={artists} handleDelete={handleDeleteSong} />
+          <ArtistDetail artists={artists} handleDelete={handleDelete} />
         </Route>
 				<Route path='/artists'>
           <Artists artists={artists} />

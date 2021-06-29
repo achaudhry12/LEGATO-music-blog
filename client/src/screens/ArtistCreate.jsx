@@ -31,7 +31,7 @@ export default function ArtistCreate(props) {
           <p>Stage Name</p>
           <input
             type='text'
-            name='stage name'
+            name='stage_name'
             value={stage_name}
             onChange={handleChange}
             />
@@ -43,7 +43,7 @@ export default function ArtistCreate(props) {
         <p>Full Name</p>
           <input
             type='text'
-            name='full name'
+            name='full_name'
             value={full_name}
             onChange={handleChange}
             />
@@ -55,7 +55,7 @@ export default function ArtistCreate(props) {
         <p>Image URL</p>
           <input
             type='text'
-            name='image url'
+            name='image_url'
             value={image_url}
             onChange={handleChange}
             />

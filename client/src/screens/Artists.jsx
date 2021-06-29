@@ -9,7 +9,7 @@ export default function Artists(props) {
     <div className="artist-body">
       <h1>ARTISTS</h1>
       <Link to="/artists/create">
-        <button>ADD ARTIST</button>
+        <button className='submit-button'>ADD ARTIST</button>
       </Link>
       {artists.map((artist) => (
         <Link to={`/artists/${artist.id}`}>

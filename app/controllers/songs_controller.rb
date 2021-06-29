@@ -3,15 +3,15 @@ class SongsController < ApplicationController
 
   # GET /artist/1/songs
   def index
-    @artist = Artist.find(params[:artist_id])
-    @songs = Song.where(artist_id: @artist.id)
+    @artist = Artist.find(params[:id])
+    @songs = Song.where(id: @artist.id)
 
     render json: @songs, include: :artists
   end
 
   # POST /artist/1/songs
   def create
-    @artist = Artist.find(params[:artist_id])
+    @artist = Artist.find(params[:id])
     @song = Song.new(song_params)
 
     if @song.save

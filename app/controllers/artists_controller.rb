@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_action :authorized_request, only: :create
+  before_action :authorize_request, only: :create
 
   # GET /artists
   def index
