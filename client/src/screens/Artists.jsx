@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/Artists.css";
+import remove from "../assets/imgs/Remove.png"
+import edit from "../assets/imgs/edit_icon.png"
 
 export default function Artists(props) {
-  const { artists } = props;
+  const { artists, handleDelete } = props;
 
   return (
     <>
@@ -27,6 +29,10 @@ export default function Artists(props) {
               <div className="artist-text-contianer">
                 <h2 key={artist.id}>{artist.stage_name}</h2>
                 <p key={artist.id}>{artist.full_name}</p>
+              </div>
+              <div className="ud-buttons">
+                <Link to={`/artists/${artist.id}/edit`}><img src={edit} alt="edit" /></Link>
+                {/* <button onClick={() => handleDelete(artist.id)}><img src={remove} alt="delete" /></button> */}
               </div>
             </div>
           </Link>

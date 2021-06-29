@@ -7,6 +7,7 @@
   background: -webkit-linear-gradient(to left, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   justify-content: center;
+  box-shadow: 1px 1px 30px 1px black;
 }
 
 .title_div {
@@ -20,6 +21,7 @@
 .title_div p{
   margin: 0;
   color: black;
+  letter-spacing: 7px;
 }
 
 .title_div .title {

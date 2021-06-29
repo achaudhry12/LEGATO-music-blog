@@ -49,7 +49,7 @@ export default function MainContainer() {
 				return artist.id === Number(id) ? artistItem : artist;
 			})
 		);
-		history.push('/song');
+		history.push('/artists');
   };
 
   const handleDelete = async (id) => {
@@ -92,7 +92,7 @@ export default function MainContainer() {
           <Songs artists={artists} songs={songs} />
         </Route>
         <Route path='/artists/:id/edit'>
-          <ArtistEdit artists={artists} handleDelete={handleUpdate} />
+          <ArtistEdit artists={artists} handleUpdate={handleUpdate} handleDelete={handleDelete} />
         </Route>
         <Route path='/artists/create'>
 					<ArtistCreate artists={artists} handleCreate={handleCreate} />
