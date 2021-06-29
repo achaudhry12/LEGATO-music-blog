@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getOneArtist } from "../services/artists";
+import "../assets/css/Songs.css"
 
 export default function Songs(props) {
   const { songs } = props;
@@ -18,11 +19,16 @@ export default function Songs(props) {
   }, [setArtists, id]);
 
   return (
-    <div className="artist-body">
-      <h1>SONGS</h1>
+    <>
+    <br />
+    <div className="song-body">
+        <h1 class='title'>SONGS</h1>
       <Link to={`/artists/${artists.id}/songs/create`}>
-        <button>ADD SONG</button>
+        <button className="add-button">ADD SONG</button>
       </Link>
+      <br />
+      <br />
+      <br />
       <div>
       {songs.map((song) => (
         <div className="song-container">
@@ -30,6 +36,7 @@ export default function Songs(props) {
         </div>
         ))}
         </div>
-    </div>
+      </div>
+      </>
   );
 }

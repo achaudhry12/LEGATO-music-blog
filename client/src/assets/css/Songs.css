@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.song-body .title {
+text-align: center;
+font-family: 'Permanent Marker', cursive;
+font-size: 60px;
+letter-spacing: 7px;
+margin: 30px 0;
+-webkit-text-stroke: 1.5px lightgray;
+}

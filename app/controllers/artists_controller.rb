@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  before_action :set_artist, only: [:show, :update, :destroy]
   before_action :authorize_request, only: :create
 
   # GET /artists
@@ -10,8 +11,6 @@ class ArtistsController < ApplicationController
 
   # GET /artists/1
   def show 
-    @artists = Artist.find(params[:id])
-
     render json: @artists, include: :songs
   end
 
@@ -42,8 +41,10 @@ class ArtistsController < ApplicationController
   end
 
   private
+    def set_artist
+      @artists = Artist.find(params[:id])
+    end
 
-    # Only allow a list of trusted parameters through.
     def artist_params
       params.require(:artist).permit(:stage_name, :full_name, :image_url)
     end
