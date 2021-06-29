@@ -6,18 +6,21 @@ export default function Layout(props) {
 	return (
 		<div className="layout-container">
       <div className="title-container">
-        <Link to='/artists'>
-          <h1>LEGATO</h1>
+        <div className="title">
+        <Link class='title_name' to='/artists'>
+          <p>LEGATO</p>
         </Link>
-        <h3>MUSIC BLOG</h3>
+        </div>
+        <div className='login-buttons'>
 				{currentUser ? (
-					<>
+          <>
 						<p>HI, {(currentUser.username).toUpperCase()}</p>
 						<button onClick={handleLogout}>LOGOUT</button>
 					</>
 				) : (
-					<Link to='/login'><button>LOGIN</button></Link>
-        )}
+          <Link to='/login'><button>LOGIN</button></Link>
+          )}
+          </div>
 			</div>
 			{children}
 		</div>
