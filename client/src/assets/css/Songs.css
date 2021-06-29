@@ -8,3 +8,22 @@ letter-spacing: 7px;
 margin: 30px 0;
 -webkit-text-stroke: 1.5px lightgray;
 }
+
+.link {
+  height: 120px;
+  width: 50%;
+  background-color: lightgray;
+  text-decoration: none;
+  border: 5px solid slategray;
+  border-radius: 20px;
+  border-radius: 50px;
+}
+
+.link a{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 30px;
+  padding: 10px;
+  color: black;
+}

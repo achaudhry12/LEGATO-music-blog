@@ -20,6 +20,7 @@
   margin: 50px auto;
   color: black;
   background-color: lightgray;
+  border-radius: 20px;
   cursor: pointer;
 }
 
