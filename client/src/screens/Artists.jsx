@@ -9,7 +9,7 @@ export default function Artists(props) {
     <>
       <br />
       <div className="artist-body">
-        <h1>ARTISTS</h1>
+        <p class='title'>ARTISTS</p>
         <Link to="/artists/create">
           <button className="add-button">ADD ARTIST</button>
         </Link>

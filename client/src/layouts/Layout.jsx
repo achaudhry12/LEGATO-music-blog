@@ -16,7 +16,7 @@ export default function Layout(props) {
 				{currentUser ? (
           <>
 						<p>HI, {(currentUser.username).toUpperCase()}</p>
-						<button onClick={handleLogout}>LOGOUT</button>
+						<Link to='/login'><button onClick={handleLogout}>LOGOUT</button></Link>
 					</>
 				) : (
           <Link to='/login'><button>LOGIN</button></Link>
