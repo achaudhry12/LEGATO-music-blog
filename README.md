@@ -1,5 +1,7 @@
 # LEGATO Music Blog
 
+https://legato-music-blog.netlify.app
+
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)

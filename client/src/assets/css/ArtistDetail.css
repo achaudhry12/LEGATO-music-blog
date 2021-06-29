@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.artist-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr .25fr;
+  margin: 50px auto;
+  width: 75%;
+  background-color: lightgray;
+}
+
+.artist-detail-image {
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+}
+
+.artist-detail-image img{
+  width: 100%;
+}
+
+.artist-detail-text {
+  flex-direction: column;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.artist-detail-text .name {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+}
+
+.artist-detail-text .full-name {
+  font: 25px;
+}
+
+.artist-show-songs {
+  flex-direction: column;
+}

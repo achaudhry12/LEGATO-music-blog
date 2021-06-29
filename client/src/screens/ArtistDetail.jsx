@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { getOneArtist } from "../services/artists";
 // import { deleteSong, getAllSongs, postSong, putSong } from "../services/songs";
+import "../assets/css/ArtistDetail.css";
 
 export default function ArtistDetail(props) {
   const [artist, setArtist] = useState([null]);
@@ -19,21 +20,35 @@ export default function ArtistDetail(props) {
 
   return (
     <>
-      <div>
-        <img
-          key={artist.id}
-          src={artist.image_url}
-          alt={artist.stage_name}
-        ></img>
+      <br />
+      <br />
+      <br/>
+      <div class="artist-detail-container">
+        <div className="artist-detail-image">
+          <img
+            key={artist.id}
+            src={artist.image_url}
+            alt={artist.stage_name}
+          ></img>
+        </div>
         <br />
-        <h2 key={artist.id}>{artist.stage_name}</h2>
-        <p key={artist.id}>{artist.full_name}</p>
-      </div>
-      <div>
+        <div className="artist-detail-text">
+          <p class="name" key={artist.id}>
+            {artist.stage_name}
+          </p>
+          <p class="full-name" key={artist.id}>
+            {artist.full_name}
+          </p>
+        </div>
+      <div className="artist-show-songs">
         <Link to={`/artists/${artist.id}/songs`}>
           <button>Show Songs</button>
         </Link>
       </div>
+      </div>
+      <br />
+      <br />
+      <br/>
     </>
   );
 }

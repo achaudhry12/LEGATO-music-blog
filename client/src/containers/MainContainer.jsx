@@ -54,7 +54,8 @@ export default function MainContainer() {
 
   const handleDelete = async (id) => {
 		await deleteArtist(id);
-		setArtists((prevState) => prevState.filter((artist) => artist.id !== id));
+    setArtists((prevState) => prevState.filter((artist) => artist.id !== id));
+    history.push('/artists');
 	};
 
 	// const handleCreateSong = async (artistId, formData) => {
