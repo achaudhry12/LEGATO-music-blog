@@ -18,17 +18,17 @@ export default function Register(props) {
 	};
 
   return (
+    <div className="container">
   <form
     onSubmit={(e) => {
       e.preventDefault();
       handleRegister(formData);
     }}
   >
-  <div className="register-container">
-    <h3>REGISTER</h3>
-    <div className="username-feild">
+    <h2>REGISTER</h2>
+    <div className="text-field">
 			<label>
-				USERNAME:
+      <p>Username</p>
 				<input
 					type='text'
 					name='username'
@@ -38,9 +38,9 @@ export default function Register(props) {
 			</label>
     </div>
     <br />
-    <div className="email-feild">
+    <div className="text-field">
 			<label>
-				EMAIL:
+      <p>Email</p>
 				<input
 					type='text'
 					name='email'
@@ -50,9 +50,9 @@ export default function Register(props) {
 			</label>
     </div>
     <br />
-    <div className="password-feild">
+    <div className="text-field">
 			<label>
-				PASSWORD:
+				<p>Password</p>
 				<input
 					type='password'
 					name='password'
@@ -62,8 +62,8 @@ export default function Register(props) {
         </label>
     </div>
     <br />
-    <button>SUBMIT</button>
-  </div>
+    <button className="submit-button">SUBMIT</button>
 		</form>
+  </div>
   )
 }

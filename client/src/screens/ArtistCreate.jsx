@@ -18,44 +18,52 @@ export default function ArtistCreate(props) {
   };
 
   return (
+    <div className="container">
     <form
       onSubmit={(e) => {
         e.preventDefault();
         handleCreate(formData);
       }}
-    >
-      <h1>ADD ARTIST</h1>
-      <label>
-        STAGE NAME:
-        <input
-          type="text"
-          name="stage name"
-          value={stage_name}
-          onChange={handleChange}
-        />
-      </label>
+      >
+      <h2>ADD ARTIST</h2>
+      <div className="text-field">
+        <label>
+          <p>Stage Name</p>
+          <input
+            type='text'
+            name='username'
+            value={stage_name}
+            onChange={handleChange}
+            />
+        </label>
+      </div>
       <br />
-      <label>
-        FULL NAME:
-        <input
-          type="text"
-          name="full name"
-          value={full_name}
-          onChange={handleChange}
-        />
-      </label>
+      <div className="text-field">
+        <label>
+        <p>Full Name</p>
+          <input
+            type='password'
+            name='password'
+            value={full_name}
+            onChange={handleChange}
+            />
+        </label>
+      </div>
       <br />
-      <label>
-        IMAGE URL:
-        <input
-          type="text"
-          name="image url"
-          value={image_url}
-          onChange={handleChange}
-        />
-      </label>
+      <div className="text-field">
+        <label>
+        <p>Image URL</p>
+          <input
+            type='password'
+            name='password'
+            value={image_url}
+            onChange={handleChange}
+            />
+        </label>
+      </div>
       <br />
-      <button>Submit</button>
-    </form>
+      <button className="submit-button">SUBMIT</button>
+      </form>
+    </div>
   );
 }

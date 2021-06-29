@@ -75,7 +75,7 @@ export default function MainContainer() {
 	return (
 		<div>
 			<Switch>
-				<Route path='artists'>
+				<Route path='/artists'>
           <Artists artists={artists} />
 				</Route>
 				<Route path='/artists/:id'>
