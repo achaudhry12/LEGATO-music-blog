@@ -19,6 +19,11 @@ https://legato-music-blog.netlify.app
 
 <br>
 
+
+<img width="451" alt="Screen Shot 2021-11-04 at 12 37 25 PM" src="https://user-images.githubusercontent.com/82814499/140382010-eb5a9772-c457-4d70-9d50-2655e7ba22e6.png">
+
+
+
 ## Overview
 The goal of this app is to provide an environment where people can upload and share their favorite songs. The user. would have to register to add any songs or see other songs that people have added. They can go further and edit any indivudual song along with deleting any songs. Users in the future would be allowed to comment on songs in order to provide feeback to the uploader and spark a community disscussion.
 
